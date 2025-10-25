@@ -1,0 +1,83 @@
+{% include "header.html" %}
+
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <div class="parallax1">
+            <div class="paracolor text-center" >
+              <div class="col" style="padding-top: 180px; opacity: 4;">ABOUT US</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" style="margin-top: 100px; margin-bottom: 70px;">
+        <div class="col">
+          <p class="text-start" style="font-size: 50px; font-weight: 100; font-family: 'Times New Roman', Times, serif; line-height: 80px; letter-spacing: 2px;">From the Initial Consultation, You’ll See How to Events is <br> Different.</p>
+        </div>
+        <div class="col mt-2">
+          <p style="font-family: 'Times New Roman', Times, serif; text-align: justify; font-size: 20px; line-height: 30px;">At Starlight Events, we help manage your big ideas and your smallest concerns to ensure you are stress-free and enjoying every moment. For more than a decade, we’ve been working with clients to create exceptional experiences for their nonprofit fundraiser or social gathering. </p>
+          <a href="/contact"><button style="width: 250px; height: 70px; font-size: 25px;  background-color: #d4f0f2; color: rgb(55, 155, 109); border-radius: 10px; z-index: 3px; margin-top: 25px; border: 1px solid rgb(221, 79, 79); margin-bottom: 60px;">LEARN MORE</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" style="background-color: rgb(246, 247, 249);">
+      <div class="container">
+        <div class="row" >
+          <div class="col-lg-6 col-md-12 col-sm-12" style="margin-top: 30px; margin-bottom: 50px;">
+            <p class="text-start" style="font-size: 50px; font-weight: 100; font-family: 'Times New Roman', Times, serif; line-height: 80px; letter-spacing: 2px;">Meet The Owner</p>
+            <p style="font-family: 'Times New Roman', Times, serif; text-align: justify; font-size: 18px; line-height: 30px;">Over the last decade, Kristin has planned and executed hundreds of events ranging from large-scale conventions to themed holiday parties to intimate networking dinners and everything in between. Her creativity, attention to detail, organizational skills and passion for planning ensures the success of every celebration she’s a part of.</p>
+            <p style="font-family: 'Times New Roman', Times, serif; text-align: justify; font-size: 18px; line-height: 30px;">Kristin began her career working at the Sheraton Boston Hotel, the largest hotel in Boston, where she realized her love for planning, logistics, and all the little details that make a spectacular event. From there, she was recruited by the Director of Employee Programs at Partners HealthCare, where she planned corporate and employee recognition events for almost ten years.</p>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 text-center" style="margin-top: 50px; margin-bottom: 50px;">
+            <div class="imgebox">
+              <img src="/static/images/ab1.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-5" >
+      <div class="container">
+        <div class="row" >
+          <div class="col text-center ">
+            <p style="font-size: 50px; font-weight: 100; font-family: 'Times New Roman', Times, serif; line-height: 80px; letter-spacing: 2px;">Our Team</p>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center">
+        <div class="row">
+          {% for a in memberdetail %}
+          <div class="col-lg-6 mt-2 mb-2">
+            <div class="card" style="width: 18rem;">
+              <img src="{{a.member_img}}" class="card-img-top" alt="...">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{a.member_name}}</li>
+                <li class="list-group-item">{{a.member_work}}</li>
+                <li class="list-group-item">{{a.member_exp}}</li>
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="container ">
+      <div class="row">
+        <div class="col mt-5 ">
+          <div class="imgtext mt-5 mb-5">
+            <div class="obimgtext">
+              <div class="container">
+                <div class="row text-start" style="padding-top: 60px; padding-left: 80px;">
+                  <p>Celebrate Your Success!</p>
+                  <a href="/contact"><button style="width: 250px; height: 70px; font-size: 25px;  background-color: #f5fbfb; color: rgb(0, 0, 0); border-radius: 10px; z-index: 3px; margin-top: 25px; border: 1px solid rgb(10, 8, 8); margin-bottom: 60px; opacity: 4;">CONTACT US</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "footer.html" %}

@@ -1,0 +1,84 @@
+{% include "header.html" %}
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <div class="parallax">
+            <div class="paracolor text-center">
+              <span style="opacity: 4;">UNIQUE <br> CREATIVE <br> EXTRAORDINARY <br></span>
+              <a href="/contact"><button style="width: 250px; height: 102px; font-size: 25px; font-weight: bold; background-color: #96f6fc; color: rgb(4, 4, 4); border-radius: 10px; margin-top: 40px;"><span style="opacity: 10;">CONTACT US</span></button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="row " style="margin-top: -40px; margin-bottom: 80px;">
+        <div class="box " style="background-image: url('/static/images/wal.jpeg');"> 
+          <div class="row mt-4 ">      
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <img src="/static/images/walimg.avif" alt="" class="img-fluid" width="95%">
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12" >
+              <div style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">EVERYTHING YOU NEED FOR THE</div>
+              <div style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px; margin-bottom: 20px;">PERFECT EVENT</div> 
+              <p style="text-align: justify; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px; padding-right: 20px;">From logistics to design, production and operations and everything in between. We understand that special events, meetings and conferences are important to all company stakeholders and we include those goals and missions in our planning process. Whether it be a board retreat for 12 or a city-wide event for thousands we give our dedication and attention to detail to every event.</p>
+              <a href="/gallery"><button style="width: 250px; height: 85px; font-size: 25px;  background-color: #d4f0f2; color: rgb(55, 155, 109); border-radius: 10px; z-index: 3px; margin-top: 25px; border: 1px solid rgb(221, 79, 79); margin-bottom: 60px;">OUR WORK</button></a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="container" >
+        <div class="row mt-5" style="margin-bottom: 20px;">
+          <div class="col text-center">
+            <span style="font-family: 'Times New Roman', Times, serif; font-size: 50px; font-weight: 100; line-height: 60px;">Events</span>
+            <p style="text-align: center; font-size: 18px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-top: 10px; line-height: 35px; font-size: 18px;">From a laid-back company picnic to a Great Gatsby themed holiday party, Star light <br> Events delivers a top-notch corporate event that will leave a lasting impression on <br> your attendees.</p>
+          </div>
+        </div>
+        <div class="row " style="margin-bottom: 50px;">
+          {%for e in eventimg %}
+          <div class="col-lg-4 col-md-4 col-sm-12 mt-4 mb-5 text-center">
+            <img src="{{e.event_img}}" alt="" style="width: 90%; height: 380px;">
+            <span style="font-size: 25px; font-family: 'Times New Roman', Times, serif;">{{e.event_name}}</span>  
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid " style="background-color: rgb(246, 247, 249);">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-6 col-md-12 col-sm-12 mt-5 mb-5">
+            <p class="text-start" style="font-size: 50px; font-weight: 100; font-family: 'Times New Roman', Times, serif; line-height: 70px;">From Venue Selection to Event Execution, We’re With You Every Step of the Way!</p>
+            <p class="text-start" style="font-size: 18px; font-weight: 100; font-family: 'Times New Roman', Times, serif; line-height: 40px;">We’ll make sure that every detail is taken care of so that you can feel confident and worry-free on the day of your event. Whether you’re hosting an intimate dinner soiree or a large corporate event, we’ve got you covered.</p>
+            <a href="/contact"><button style="width: 250px; height: 85px; font-size: 25px;  background-color: #d4f0f2; color: rgb(55, 155, 109); border-radius: 10px; z-index: 3px; margin-top: 25px; border: 1px solid rgb(221, 79, 79); margin-bottom: 60px;">CONTACT US</button></a>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 mt-5 mb-5 text-center">
+            <div class="imgebox">
+              <img src="/static/images/ab1.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" >
+      <div class="container" >
+        <div class="row mt-5" style="margin-top: 10px; margin-bottom: 20px;">
+          <div class="col text-center">
+            <span style="font-family: 'Times New Roman', Times, serif; font-size: 50px; font-weight: 100; line-height: 60px;">Gallery</span>
+          </div>
+        </div>
+        <div class="row " style="margin-top: 10px; margin-bottom: 20px;">
+          {%for g in galleryimg %}
+          <div class="col-lg-4 col-md-4 col-sm-12 mt-4 mb-4 text-center">
+            <img src="{{g.gallery_img}}" alt="" style="width: 90%; height: 380px;">
+          </div>
+          {% endfor %}
+        </div>
+        <center><a href="/gallery"><button style="width: 300px; height: 85px; font-size: 25px;  background-color: #d4f0f2; color: rgb(55, 155, 109); border-radius: 10px; z-index: 3px; margin-top: 25px; border: 1px solid rgb(221, 79, 79); margin-bottom: 60px;">VIEM MORE PHOTOS</button></a></center>
+      </div>
+    </div>
+</body>
+    
+{% include "footer.html" %}

@@ -1,0 +1,69 @@
+{% include "header.html" %}
+
+<div class="">
+      <div class="row">
+        <div class="col">
+          <div class="parallax5">
+            <div class="paracolor text-center" >
+              <div class="col" style="padding-top: 180px; opacity: 4;">CONTACT US</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="row mt-5">
+            <span style="font-family: 'Times New Roman', Times, serif; font-size: 50px; font-weight: 100; line-height: 60px;">Say Hello!</span>
+          </div>
+          <div class="row mt-5">
+            <p style="font-family: 'Times New Roman', Times, serif; text-align: justify; font-size: 19px; line-height: 35px; padding-top: 10px;">Our clients consider us an extension of their team – and we love that! Bring us on board to ensure your next corporate event goes off without a hitch. We look forward to the opportunity of working with you.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12"></div>
+      </div>
+    </div>
+    <div class="container ">
+      <div class="row align-items-start mt-5 mb-5">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="for_form" style="width: 90%;">
+            <form method="post" action="" class="form-m" autocomplete="off">
+              {% csrf_token %}
+              <div class="mb-4">
+                <label for="exampleInputName" class="form-label" style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 100; line-height: 10px;">Name</label>
+                <input type="text" name="name" class="form-control" id=""/>
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label" style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 100; line-height: 10px;">Email Address</label>
+                <input type="email" class="form-control" id="" aria-describedby="emailHelp" name="email"/>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputPhone" class="form-label" style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 100; line-height: 10px;">Phone Number</label>
+                <input type="text" class="form-control" id="" name="phone"/>
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEventT" class="form-label" style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 100; line-height: 10px;">Event Type</label>
+                <input type="text" class="form-control" id="" name="event_type"/>
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputEventD" class="form-label" style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 100; line-height: 10px;">Event Date</label>
+                <input type="date" class="form-control" id="" name="event_date"/>
+              </div>
+              <div class="mb-4">
+                <label for="exampleInputSubject" class="form-label" style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 100; line-height: 10px;">Subject</label>
+                <input type="text" class="form-control" id="" name="subject"/>
+              </div>
+              <div class="mb-4">
+                <label for="exampleFormControlTextareaM" class="form-label" style="font-family: 'Times New Roman', Times, serif; font-size: 19px; font-weight: 100; line-height: 10px;">Message</label>
+                <textarea class="form-control" id="" rows="3" name="message"></textarea>
+              </div>
+                <div><button type="submit" class="btn btn-outline-dark btnchange">CONTACT US</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+        {% include "footer.html" %}

@@ -1,0 +1,81 @@
+{% include "header.html" %}
+
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <div class="parallax3">
+            <div class="paracolor text-center" >
+              <div class="col" style="padding-top: 180px; opacity: 4;">EVENTS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row " style="margin-top: 50px;">
+        <div class="col text-center">
+          <span style="font-family: 'Times New Roman', Times, serif; font-size: 50px; font-weight: 100; line-height: 60px;">Best Events</span>
+        </div>
+      </div>
+      <div class="row">
+        {% for p in programdetail %}
+        <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mb-3">
+          <div class="card" style="width: 60%; box-shadow: 1px 1px 5px 5px rgb(200, 209, 218);">
+            <img src="{{p.programs_img}}" class="card-img-top " alt="..." style="height: 200px; object-fit: cover;" >
+            <div class="card-body">
+              <h5 class="card-title">{{p.programs_name}}</h5>
+              <p class="card-text">{{p.programs_detail}}</p>
+              <a href="/eventdetail/{{p.id}}" class="card-link" style="text-decoration: none;">Read More....</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>    
+    <div class="container-fluid" style="background-color: rgb(246, 247, 249);">
+      <div class="container">
+        <div class="row " style="padding-top: 20px;  margin-top: 50px;">
+          <div class="col text-center">
+            <span style="font-family: 'Times New Roman', Times, serif; font-size: 50px; font-weight: 100; line-height: 60px;">Latest Events</span>
+          </div>
+        </div>
+        <div class="row">
+          {% for l in latprogramdetail %}
+        <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mb-3">
+          <div class="card" style="width: 60%; box-shadow: 1px 1px 5px 5px rgb(200, 209, 218);">
+            <img src="{{l.latprograms_img}}" class="card-img-top " alt="..." style="height: 200px; object-fit: cover;" >
+            <div class="card-body">
+              <h5 class="card-title">{{l.latprograms_name}}</h5>
+              <p class="card-text">{{l.latprograms_detail}}</p>
+              <a href="/lateventdetail/{{l.id}}" class="card-link" style="text-decoration: none;">Read More....</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>    
+    <div class="container">
+      <div class="row " style="margin-top: 50px;">
+        <div class="col text-center">
+          <span style="font-family: 'Times New Roman', Times, serif; font-size: 50px; font-weight: 100; line-height: 60px;">Upcoming Events</span>
+        </div>
+      </div>
+      <div class="row">
+        {% for u in upcprogramsdetail %}
+        <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mb-5">
+          <div class="card" style="width: 60%; box-shadow: 1px 1px 5px 5px rgb(200, 209, 218);">
+            <img src="{{u.upcprograms_img}}" class="card-img-top " alt="..." style="height: 200px; object-fit: cover;" >
+            <div class="card-body">
+              <h5 class="card-title">{{u.upcprograms_name}}</h5>
+              <p class="card-text">{{u.upcprograms_detail}}</p>
+              <a href="/upceventdetail/{{u.id}}" class="card-link" style="text-decoration: none;">Read More....</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>    
+        
+        
+    {% include "footer.html" %}

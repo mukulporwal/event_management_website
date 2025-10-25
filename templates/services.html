@@ -1,0 +1,65 @@
+{% include "header.html" %}
+
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <div class="parallax2">
+            <div class="paracolor text-center" >
+              <div class="col" style="padding-top: 180px; opacity: 4;">SERVICES</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" style="margin-top: 100px; margin-bottom: 50px;">
+        <div class="col">
+          <p class="text-start" style="font-size: 50px; font-weight: 100; font-family: 'Times New Roman', Times, serif; line-height: 80px; letter-spacing: 2px;">We know that <br> planning an event can <br> be a lot of work.</p>
+        </div>
+        <div class="col mt-2">
+          <p style="font-family: 'Times New Roman', Times, serif; text-align: justify; font-size: 20px; line-height: 35px;">Whether it’s your first time or you’ve planned events before, it takes time, vendor relationships and experience to execute an amazing celebration. It can be overwhelming when you don’t know where to start, who to call and how far in advance you should be doing these tasks.Staying on budget, tracking RSVPs and managing all of the little details is a daunting task when you don’t have the right resources or help to do it.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" style="background-color: rgb(246, 247, 249);">
+      <div class="container" >
+        {% for b in service_detail %}
+        <div class="row " style="padding-top: 50px; margin-bottom: 25px;">
+          <div class="col text-center">
+            <span style="font-family: 'Times New Roman', Times, serif; font-size: 50px; font-weight: 100; line-height: 60px;">{{b.s_title}}</span>
+          </div>
+        </div>
+        <!-- {% for b in service_detail %} -->
+        <div class="row " style="margin-top: 10px; margin-bottom: 20px; padding-bottom: 25px;">
+          <div class="col-lg-6 col-md-6 col-sm-12 mt-4 mb-4 text-center">
+            <img src="{{b.s_img}}" alt="" class="img-fluid" style="width: 80%; height: 350px; box-shadow: 0px 0px 40px 10px rgb(224, 224, 113);">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mt-4 mb-5 text-center">
+            <p style="font-family: 'Times New Roman', Times, serif; text-align: justify; font-size: 20px; line-height: 35px; padding-top: 10px;">{{b.s_des}}</p>
+          </div>
+        </div>
+        <!-- {% endfor %} -->
+      </div>
+      {% endfor %}
+    </div>
+    <div class="container" >
+      {% for c in service_detaill %}
+      <div class="row " style="padding-top: 50px; margin-bottom: 25px;">
+        <div class="col text-center">
+          <span style="font-family: 'Times New Roman', Times, serif; font-size: 50px; font-weight: 100; line-height: 60px;">{{c.s_titlel}}</span>
+        </div>
+      </div>
+      
+        <div class="row " style="margin-top: 10px; margin-bottom: 20px; padding-bottom: 25px;">
+          <div class="col-lg-6 col-md-6 col-sm-12 mt-4 mb-5 text-center">
+            <p style="font-family: 'Times New Roman', Times, serif; text-align: justify; font-size: 20px; line-height: 35px; padding-top: 10px;">{{c.s_desl}}</p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mt-4 mb-4 text-center">
+            <img src="{{c.s_imgl}}" alt="" class="img-fluid" style="width: 80%; height: 350px; box-shadow: 0px 0px 40px 10px rgb(224, 224, 113);">
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+    {% include "footer.html" %}
