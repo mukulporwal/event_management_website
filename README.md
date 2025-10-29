@@ -1,6 +1,6 @@
-# 🎉 Event Management System
+# 🎉 Event Management Website
 
-A complete and responsive **Event Management System** built using **Python (Django)** for the backend and **HTML, CSS, JavaScript, and Bootstrap** for the frontend.  
+A complete and responsive **Event Management Website** built using **Python (Django)** for the backend and **HTML, CSS, JavaScript, and Bootstrap** for the frontend.  
 This project allows users to explore events, view schedules, register for events, and manage event data dynamically.
 
 ---
@@ -21,3 +21,4 @@ This project allows users to explore events, view schedules, register for events
 **Database:** SQLite3 (default Django DB)  
 
 ---
+
